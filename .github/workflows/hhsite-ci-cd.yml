@@ -28,9 +28,8 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Docusaurus build
         run: npm run build
-      - name: CD into build directory
+      - name: CD into build directory and deploy the build to S3
         working-directory: ./build
-      - name: Deploy build dist to S3
         run: aws s3 sync . s3://hasibhassan.com --delete
       # - name: Invalidate Cloudfront cache
       #   run: aws cloudfront create-invalidation --distribution-id ${{ dist_ID }} --paths "/*"
