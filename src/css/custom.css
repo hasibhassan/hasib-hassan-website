@@ -6,15 +6,20 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #209cee;
+  --ifm-color-primary-dark: #118fe2;
+  --ifm-color-primary-darker: #1087d5;
+  --ifm-color-primary-darkest: #0d6fb0;
+  --ifm-color-primary-light: #39a7f0;
+  --ifm-color-primary-lighter: #46adf1;
+  --ifm-color-primary-lightest: #6bbdf4;
+  --ifm-code-font-size: 90%;
+  --ifm-font-size-base: 17px;
+  --ifm-font-family-base: 'Inter';
 }
 
 .docusaurus-highlight-code-line {
