@@ -17,7 +17,7 @@ import { DiscussionEmbed } from 'disqus-react'
 function BlogPostPage(props) {
   const { content: BlogPostContents, sidebar } = props
   const { frontMatter, metadata } = BlogPostContents
-  const { title, description, nextItem, prevItem, editUrl } = metadata
+  const { slug, title, description, nextItem, prevItem, editUrl } = metadata
   const { hide_table_of_contents: hideTableOfContents } = frontMatter
   return (
     <Layout
