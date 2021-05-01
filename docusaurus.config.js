@@ -2,7 +2,7 @@
 module.exports = {
   title: 'Hasib Hassan',
   tagline: "Hasib Hassan's Blog",
-  url: 'https://hasibhassan.com',
+  url: 'https://www.hasibhassan.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -45,7 +45,7 @@ module.exports = {
           routeBasePath: '/',
           showReadingTime: true,
           editUrl:
-            'https://github.com/hasibhassan/hasib-hassan-website/edit/master/website/blog/',
+            'https://github.com/hasibhassan/hasib-hassan-website/tree/master/blog',
           postsPerPage: 3,
           feedOptions: {
             type: 'all',
