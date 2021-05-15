@@ -58,7 +58,7 @@ module.exports = {
         },
         gtag: {
           // You can also use your "G-" Measurement ID here.
-          trackingID: 'G-Q0TB0JMGG5',
+          measurementID: 'G-Q0TB0JMGG5',
           // Optional fields.
           anonymizeIP: true, // Should IPs be anonymized?
         },
