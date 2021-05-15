@@ -20,13 +20,13 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
-      - uses: actions/cache@v2
-        with:
-          path: ./node_modules
-          key: modules-${{ hashFiles('package-lock.json') }}
+      # - uses: actions/cache@v2
+      #   with:
+      #     path: ./node_modules
+      #     key: modules-${{ hashFiles('package-lock.json') }}
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci --ignore-scripts
+        # if: steps.cache.outputs.cache-hit != 'true'
+        run: npm i
       - name: Docusaurus build
         run: npm run build
       - name: CD into build directory and deploy the build to S3
