@@ -32,5 +32,5 @@ jobs:
       - name: CD into build directory and deploy the build to S3
         working-directory: ./build
         run: aws s3 sync . s3://hasibhassan.com --delete
-      - name: Invalidate Cloudfront cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
+      # - name: Invalidate Cloudfront cache
+      #   run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
