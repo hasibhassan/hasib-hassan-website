@@ -45,7 +45,7 @@ module.exports = {
           routeBasePath: '/',
           showReadingTime: true,
           editUrl:
-            'https://github.com/hasibhassan/hasib-hassan-website/tree/master/blog',
+            'https://github.com/hasibhassan/hasib-hassan-website/tree/master',
           postsPerPage: 3,
           feedOptions: {
             type: 'all',
