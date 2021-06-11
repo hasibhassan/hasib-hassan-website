@@ -49,7 +49,7 @@ module.exports = {
           postsPerPage: 3,
           feedOptions: {
             type: 'all',
-            copyright: `Hasib Hassan © ${new Date().getFullYear()}`,
+            copyright: `© ${new Date().getFullYear()} Hasib Hassan`,
           },
           blogTitle: 'Hasib Hassan Blog',
         },
