@@ -5,7 +5,7 @@ const PortfolioPage = () => {
   return (
     <div className={styles.container}>
       <div className="card shadow--md">
-        <div className="card__header">Vision crypto dashboard</div>
+        <div className="card__header">Vision - A cryptocurrency dashboard</div>
         <div className="card__image">
           <img
             src="https://res.cloudinary.com/dmklkumxi/image/upload/v1636480470/Visionhomesmall_g8ccud.png"
