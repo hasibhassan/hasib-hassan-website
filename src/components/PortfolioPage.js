@@ -8,7 +8,7 @@ const PortfolioPage = () => {
         <div className="card__header">Vision crypto dashboard</div>
         <div className="card__image">
           <img
-            src="../../static/img/Visionhome.png"
+            src="static/img/visionhome.png"
             alt="Vision home screenshot"
             title="Vision home"
           />
