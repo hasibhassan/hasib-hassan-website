@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './PortfolioPage.module.css'
+import VisionHomeUrl from '@site/static/img/visionhome.png'
 
 const PortfolioPage = () => {
   return (
@@ -8,7 +9,7 @@ const PortfolioPage = () => {
         <div className="card__header">Vision crypto dashboard</div>
         <div className="card__image">
           <img
-            src="../img/visionhome.png"
+            src={VisionHomeUrl}
             alt="Vision home screenshot"
             title="Vision home"
           />
