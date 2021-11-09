@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './PortfolioPage.module.css'
+import useBaseUrl from '@docusaurus/useBaseUrl'
 
 const PortfolioPage = () => {
   return (
@@ -8,7 +9,7 @@ const PortfolioPage = () => {
         <div className="card__header">Vision crypto dashboard</div>
         <div className="card__image">
           <img
-            src="static/img/visionhome.png"
+            src={useBaseUrl('img/visionhome.png')}
             alt="Vision home screenshot"
             title="Vision home"
           />
