@@ -22,7 +22,7 @@ module.exports = {
       hideOnScroll: true,
       title: 'Hasib Hassan',
       items: [
-        { to: '/about', label: 'About', position: 'right' },
+        { to: '/portfolio', label: 'Portfolio', position: 'right' },
         {
           href: 'https://github.com/hasibhassan',
           position: 'right',
