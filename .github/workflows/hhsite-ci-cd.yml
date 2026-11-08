@@ -37,4 +37,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --name ${{ secrets.CLOUDFLARE_WORKER_NAME }} --assets ./build
+          command: deploy --name ${{ secrets.CLOUDFLARE_WORKER_NAME }} --assets ./build -compatibility-date 2026-11-04
