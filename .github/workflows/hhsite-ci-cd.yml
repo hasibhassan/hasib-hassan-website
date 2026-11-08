@@ -29,7 +29,9 @@ jobs:
 
       - name: Build Docusaurus site
         run: npm run build
-
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
+          
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v4
         with:
