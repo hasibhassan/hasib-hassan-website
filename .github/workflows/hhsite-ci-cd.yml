@@ -6,31 +6,33 @@ on:
       - master
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
-    name: deploy
+    name: Deploy to Cloudflare
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '14.x'
-      - uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-      # - uses: actions/cache@v2
-      #   with:
-      #     path: ./node_modules
-      #     key: modules-${{ hashFiles('package-lock.json') }}
+          node-version: '22'
+          cache: npm
+
       - name: Install dependencies
-        # if: steps.cache.outputs.cache-hit != 'true'
-        run: npm i
-      - name: Docusaurus build
+        run: npm ci
+
+      - name: Build Docusaurus site
         run: npm run build
-      - name: CD into build directory and deploy the build to S3
-        working-directory: ./build
-        run: aws s3 sync . s3://hasibhassan.com --delete
-      - name: Invalidate Cloudfront cache
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DIST_ID }} --paths "/*"
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --name ${{ secrets.CLOUDFLARE_WORKER_NAME }} --assets ./build
